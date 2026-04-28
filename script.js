@@ -131,3 +131,12 @@ if (carousel) {
   renderSlide(activeIndex);
   startAutoSlide();
 }
+
+
+function toggleProjects() {
+  const list = document.getElementById("projectsList");
+  const icon = document.getElementById("toggleIcon");
+
+  list.classList.toggle("active");
+  icon.classList.toggle("rotate");
+}

@@ -1037,3 +1037,92 @@ body.loaded .logo {
     grid-column: auto;
   }
 }
+
+.other-projects {
+  width: 80%;
+  margin: 40px auto;   /* centers horizontally */
+  font-family: Arial, sans-serif;
+}
+
+/* Card-like bar */
+.other-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 18px;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 1.0);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+
+/* Text */
+.title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Plus icon circle */
+.icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+
+  transition: 0.3s ease;
+}
+
+/* Rotate on open */
+.icon.rotate {
+  transform: rotate(45deg);
+}
+
+/* Dropdown */
+.projects-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+
+  margin-top: 10px;
+  border-radius: 12px;
+}
+
+/* Active */
+.projects-list.active {
+  max-height: 2000px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+/* Items */
+.project-item {
+  padding: 12px;
+  border-bottom: 1px solid #2d3748;
+  color: #000000;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-item:hover {
+  background: #1f2937;
+  border-radius: 8px;
+  color:white
+}
