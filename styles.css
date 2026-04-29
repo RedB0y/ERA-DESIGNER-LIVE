@@ -1042,6 +1042,7 @@ body.loaded .logo {
   width: 80%;
   margin: 40px auto;   /* centers horizontally */
   font-family: Arial, sans-serif;
+  
 }
 
 /* Card-like bar */
@@ -1093,36 +1094,121 @@ body.loaded .logo {
   transform: rotate(45deg);
 }
 
-/* Dropdown */
-.projects-list {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.4s ease;
+/* OTHER PROJECTS CARD */
+.projects-wrapper {
+  max-width: 1200px;
+  margin: 60px auto 0; /* aligns with container */
+  padding: 0 20px;
+}
 
-  margin-top: 10px;
+/* HEADING STYLE (matches your hero style) */
+.projects-title {
+   font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  width:100%;
+  background: #f4f4f4;
+  padding: 18px 20px;
   border-radius: 12px;
+
+  border-left: 5px solid #f4a100; /* yellow accent */
+
+  display: inline-block;
+  margin-bottom: 25px;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
 }
 
-/* Active */
-.projects-list.active {
-  max-height: 2000px;
-  padding: 10px;
+/* CARD LOOK */
+.projects-card {
   background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border: 1px solid #eee;
 }
 
-/* Items */
-.project-item {
-  padding: 12px;
-  border-bottom: 1px solid #2d3748;
-  color: #000000;
+/* TABLE */
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Manrope', sans-serif;
 }
 
-.project-item:last-child {
-  border-bottom: none;
+/* HEADER */
+.projects-table thead {
+  background: #2c3e50;
 }
 
-.project-item:hover {
-  background: #1f2937;
-  border-radius: 8px;
-  color:white
+.projects-table th {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 16px;
 }
+
+/* BODY */
+.projects-table td {
+  padding: 14px 16px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* ROW STYLING */
+.projects-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: all 0.2s ease;
+}
+
+.projects-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.projects-table tbody tr:hover {
+  background: #f1f5f9;
+}
+
+/* FIRST COLUMN (S.No) */
+.projects-table td:first-child {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .projects-table thead {
+    display: none;
+  }
+
+  .projects-table,
+  .projects-table tbody,
+  .projects-table tr,
+  .projects-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .projects-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .projects-table td {
+    padding: 10px;
+    text-align: left;
+    position: relative;
+  }
+
+  .projects-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    display: block;
+    color: #999;
+    margin-bottom: 4px;
+  }
+}
+
